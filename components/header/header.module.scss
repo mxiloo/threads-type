@@ -1,0 +1,66 @@
+.container {
+    background-color: #101010;
+    opacity: .7;
+    padding: 10px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all .2s;
+}
+
+.container_top {
+    background-color: #1a1a1d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 25px;
+    transition: all .2s;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.logo {
+    background-image: url('../../app/ball.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.button_text {
+    background-color: inherit;
+    border: 1px solid white;
+    color: white;
+    border-radius: 15px;
+    padding: 7px 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .1s ease-in-out, color .1s ease-in-out ;
+
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+}
+
+.header_text {
+    color: white;
+    transition: color, opacity .1s ease-in-out;
+    opacity: .6;
+    cursor: pointer;
+    
+    &:hover {
+        opacity: 1;
+      }
+}

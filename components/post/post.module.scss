@@ -1,0 +1,158 @@
+.section {
+    display: flex;
+    flex-direction: row;
+    max-width: 700px;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.border_bottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.post_data {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    position: relative;
+}
+
+.top_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dots {
+    background-image: url('../../images/more.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all .2s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.top_box_left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.nickname_container {
+    height: 25px;
+}
+
+.nickname {
+    color: white;
+    cursor: pointer;
+    
+
+    &:hover {
+        border-bottom: 1px solid white;
+    }
+}
+
+.name {
+    color: white;
+    word-break: normal;
+    font-weight: 400;
+}
+
+.time {
+    color: rgb(99, 99, 99);
+}
+
+.picture_box {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.picture {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.like_active {
+    background-image: url('../../images/like-active.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    transition: all .1s;
+    cursor: pointer;
+}
+
+.like {
+    background-image: url('../../images/like.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    transition: all .1s;
+    cursor: pointer;
+}
+
+.likes_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 50px;
+    gap: 6px;
+}
+
+.likes_number {
+    color: white;
+    font-size: 15px;
+}
+
+.dropdown {
+    position: absolute;
+    background-color: #181818;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px 25px;
+    opacity: 1;
+    transition: all .2;
+    display: block;
+    right: 0px;
+    top: 25px;
+    z-index: 15;
+}
+
+.dropdown_disabled {
+    opacity: 0;
+    transition: all .2;
+    display: none;
+}
+
+.delete_text {
+    opacity: 1;
+    color: rgb(238, 39, 39);
+    font-weight: 600;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+        color: rgb(230, 93, 93);
+    }
+}

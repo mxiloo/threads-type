@@ -1,0 +1,21 @@
+.preloader_disable {
+    scale: 0;
+    transition: all .1s;
+}
+
+.preloader_active {
+    scale: 1;
+    transition: all .2s;
+}
+
+.section_move {
+    max-width: 1240px;
+    margin: 25px auto 0;
+    transition: all .2s;
+}
+
+.section {
+    max-width: 1240px;
+    margin: -25px auto 0;
+    transition: all .4s;
+}

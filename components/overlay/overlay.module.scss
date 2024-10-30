@@ -1,0 +1,28 @@
+.overlay {
+    background-color: rgba(0,0,0,.9);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 20;
+}
+
+.cancel {
+    position: fixed;
+    background-image: url('../../images/cancel.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    right: 50px;
+    top: 100px;
+    z-index: 21;
+    opacity: .4;
+    transition: opacity .2s ease-in-out ;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    }
+}
