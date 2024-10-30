@@ -111,10 +111,6 @@ function Post({post}: TPost) {
                         }} className={likeStyle ? styles.like_active : styles.like}></div>
                         <span className={styles.likes_number}>{likeLength}</span>
                     </div>
-
-                    <div>
-                        
-                    </div>
                     
                 </div>
             </section>

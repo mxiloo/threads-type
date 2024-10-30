@@ -15,6 +15,7 @@ function Feed() {
     const {isRefreshed} = useContextValue();
     const {isImageCliked} = useContext(FeedPageContext);
     const {isLoading} = useContextValue();
+    const {posts} = useContext(FeedPageContext);
 
     if (isLoading) {
         return <Preloader />
@@ -28,7 +29,7 @@ function Feed() {
 
             <section className={isRefreshed ? styles.section_move : styles.section}>
                 <AddPost />
-                <Posts />
+                <Posts posts={posts}/>
             </section>
             {isImageCliked ? <Modal /> : null}
             {}
