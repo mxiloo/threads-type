@@ -1,16 +1,30 @@
-import ProfileData from '@/components/profile-data/profile-data';
+'use client'
+
 import styles from './profile.module.scss';
-import ModalChange from '@/components/modal-change/modal-change';
+import { useContext } from 'react';
+import { ProfileContext } from '@/components/provider/profile-provider';
+import { FeedPageContext } from '@/components/provider/feed-page-provider';
+import Posts from '@/components/posts/posts';
+import ProfileAbout from '@/components/profile-about/profile-about';
 
 
 function Profile() {
+
+    const {user} = useContext(ProfileContext);
+    const {posts} = useContext(FeedPageContext);
+
+    const userPosts = posts.filter((element) => {
+        if (element?.owner?.name === user?.name) {
+            return element
+         } else {
+            return null
+        };
+    });
+
     return(
         <>
-            <section className={styles.section}>
-                <ProfileData />
-            </section>
+            <Posts posts={userPosts} />
         </>   
-        
     )
 }
 

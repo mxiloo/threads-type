@@ -11,7 +11,7 @@ function Posts({posts}: any) {
                 {posts.map((post, index: number) => (
                     <>
                         <Post key={index} post={post} index={index} lastPostIndex={lastPostIndex}/>
-                        {lastPostIndex === index ? null : <div className={styles.border_bottom}></div>}
+                        {lastPostIndex === index ? null : <div key={index} className={styles.border_bottom}></div>}
                     </>
                 ))}
             </div>
