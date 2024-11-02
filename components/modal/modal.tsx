@@ -10,7 +10,7 @@ function Modal() {
 
     const onClose = () => {
         setIsImageCliked(false)
-    }
+    };
 
     return(
         <>

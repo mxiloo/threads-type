@@ -46,7 +46,7 @@ function ProfileLayout({
     };
 
     const currentStyleLink = (value: string | undefined) => {
-        return currentPath === value ? styles.tabs_text_active : styles.tabs_text_disable
+        return currentPath === value ? styles.tabs_link_active : styles.tabs_link_disable
     };
 
     const currentStyleBorder = (value: string | undefined) => {
@@ -77,15 +77,19 @@ function ProfileLayout({
                 </ModalChange>
                 ) : null}
             <div className={styles.tabs_container}>
-            <div className={styles.navigation_box}>
-                <Link href={'/profile'} className={currentStyleLink('/profile')}>Посты</Link>
-                <div className={currentStyleBorder('/profile')}></div>
-            </div>
-                
-            <div className={styles.navigation_box}>
-                <Link href={'/profile/reposts'} className={currentStyleLink('/profile/reposts')}>Репосты</Link>
-                <div className={currentStyleBorder('/profile/reposts')}></div>
-            </div>
+                <Link href={'/profile'} className={currentStyleLink('/profile')}>
+                    <div className={styles.navigation_box}>
+                        <span className={styles.tabs_text}>Посты</span>
+                        <div className={currentStyleBorder('/profile')}></div>
+                    </div>
+                </Link>
+            
+                <Link href={'/profile/reposts'} className={currentStyleLink('/profile/reposts')}>
+                    <div className={styles.navigation_box}>
+                        <span className={styles.tabs_text}>Репосты</span>
+                        <div className={currentStyleBorder('/profile/reposts')}></div>
+                    </div>
+                </Link>
             </div>
             
         </section>

@@ -9,10 +9,10 @@ function Posts({posts}: any) {
         <section>
             <div className={styles.content}>
                 {posts.map((post, index: number) => (
-                    <>
-                        <Post key={index} post={post} index={index} lastPostIndex={lastPostIndex}/>
-                        {lastPostIndex === index ? null : <div key={index} className={styles.border_bottom}></div>}
-                    </>
+                    <div key={index}>
+                        <Post  post={post} index={index} lastPostIndex={lastPostIndex}/>
+                        {lastPostIndex === index ? null : <div  className={styles.border_bottom}></div>}
+                    </div>
                 ))}
             </div>
         </section>
