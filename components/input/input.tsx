@@ -5,13 +5,13 @@ type TInput = {
     value: string | undefined,
     setValue: Dispatch<SetStateAction<string>>,
     placeholder: string | undefined
-}
+};
 
 function Input({value, setValue, placeholder}: TInput) {
 
     const handleClear = () => {
         setValue('')
-    }
+    };
 
     return(
         <label className={styles.box}>

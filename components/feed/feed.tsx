@@ -32,7 +32,6 @@ function Feed() {
                 <Posts posts={posts}/>
             </section>
             {isImageCliked ? <Modal /> : null}
-            {}
         </>
     )
 }

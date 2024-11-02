@@ -15,9 +15,7 @@ function ProfileAbout() {
 
     const {user, setIsClickedChange, isClickedChange} = useContext(ProfileContext);
     const {isLoading, setRefreshValue} = useContextValue();
-    const {posts} = useContext(FeedPageContext);
-    console.log(posts)
-
+    
     const [updateName, setUpdateName] = useState<string | undefined>('');
     const [updateAbout, setUpdateAbout] = useState<string | undefined>('');
 
@@ -40,13 +38,6 @@ function ProfileAbout() {
         setCurrentAbout(updateAbout)
     };
     
-    const userPosts = posts.filter((element) => {
-        if (element?.owner?.name === user?.name) {
-            return element
-        } else {
-            return null
-        };
-    });
 
     if (isLoading) {
         <Preloader />
@@ -66,8 +57,6 @@ function ProfileAbout() {
                 <span>Посты</span>
                 <span>Репосты</span>
             </div>
-
-            <Posts posts={userPosts} />
 
             {isClickedChange ? (
                 <ModalChange onclose={handleClose}>

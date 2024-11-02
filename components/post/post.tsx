@@ -6,10 +6,8 @@ import { FeedPageContext } from '../provider/feed-page-provider';
 import { ProfileContext } from '../provider/profile-provider';
 import { useContextValue } from '../provider/context-provider';
 
-
-
-function Post({post}: TPost) {
-
+function Post({post}: any) {
+    
     const [likeStyle, setLikeStyle] = useState<boolean>(false);
     const [likeLength, setLikeLength] = useState<number>();
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -114,7 +112,7 @@ function Post({post}: TPost) {
                     
                 </div>
             </section>
-            <div className={styles.border_bottom}></div>
+            
         </>
         
     )
